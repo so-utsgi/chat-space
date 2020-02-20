@@ -13,7 +13,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|
+|title|text|null: false, unique: true|
  
  
 ### Association
@@ -23,10 +23,9 @@
 
 ##  postsテーブル
 |Column|Type|Options|
-|------|----|-------|
-|body|text|null: false, foreign_key: true|
-|iaage|string|null: false, foreign_key: true|
- 
+|------|----|-------| 
+|body|text|null: false| 
+|iaage|string|null: false|
 ### Association
 - belongs_to :group
 - belongs_to :user
