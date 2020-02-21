@@ -6,7 +6,7 @@
 |name|string|null: false|
 
 ### Association
-- has_many :groups, through: groups_users
+- has_many :groups, through: users_ groups
 - has_many :users_groups
 - has_many :posts
  
@@ -17,7 +17,7 @@
  
  
 ### Association
-- has_many :users, through: groups_users
+- has_many :users, through: users_ groups
 - has_many :posts  
 - has_many :users_groups
 
