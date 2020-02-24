@@ -1,0 +1,35 @@
+.contents
+  .contents__header
+    .contents__header__group
+      .contents__header__group__name
+        %p test 
+      .contents__header__group__text
+        %p Member: masa
+    .contents__header__edit
+      Edit 
+  .contents__message
+    .contents__message__box
+      .contents__message__box__name
+        masa
+      .contents__message__box__daily
+        2019/1120(wed)17:43:01
+    .contents__message__text
+      おはよう
+
+    .contents__message__box
+      .contents__message__box__name
+        masa
+      .contents__message__box__daily
+        2019/1120(wed)17:43:01
+    .contents__message__text
+      おはよう
+  
+
+  .contents__form
+    %form.contents__form__new-message
+      .contents__form__new-message__input-box
+        %input{type: "text", class: "contents__form__new-message__input-box__text", placeholder: "type a message"}
+        %label{class: "contents__form__new-message__input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: 'contents__form__new-message__input-box__image__file'}
+      %input{type: "submit", class: "contents__form__new-message__btn"}
