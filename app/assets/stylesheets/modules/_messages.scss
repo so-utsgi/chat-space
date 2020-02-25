@@ -5,7 +5,6 @@
 .wrapper{
   display: flex;
   height: 100vh;
- 
   .side-bar{
     background-color:#2f3e51;
     width: 300px;
@@ -17,8 +16,7 @@
     display: flex;
     align-items: center;
     padding: 0 20px;
-      &__box{
-        
+      &__box{    
         margin: 0px auto;
         height: 20px;
         width: 260px;
@@ -41,7 +39,6 @@
               color: white;
             }
           }
-
         }
        }
      }
@@ -59,27 +56,15 @@
       margin-bottom: 40px;
       &__group_name{
         font-size: 15px;
-    margin-bottom: 5px;
-      
+    margin-bottom: 5px;  
      }
       &__group_message{
       font-size: 11px;
       }
-
-   
      }
-
     }
      
-    
 
-
-
-
-
-
- 
- 
   .contents{
     background-color: #fafafa;
     width: calc(100vw - 300px);
@@ -92,16 +77,13 @@
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px #eee;
-    overflow: scroll;
-      
+    overflow: scroll;    
       &__group{
-        margin-top: 35px;
-         
+        margin-top: 35px;    
         &__name{
           font-size: 20px;
           color: #333;
-          margin-bottom: 15px;
-         
+          margin-bottom: 15px; 
         }
         &__text{
           display: flex;
@@ -145,13 +127,11 @@
         margin-bottom: 10px;
       }
     }
-
     &__form{
       height: 90px;
        padding: 20px 40px;
        background-color: #ddd;
       &__new-message{
-         
         display: flex;
         &__input-box{
         position: relative;
@@ -163,21 +143,17 @@
             color: #434a54;
             border-style: none;
           }
-           
           &__image{
             font-size: 1.3rem;
             position: absolute;
           top: 10px;
         right: 10px;
        cursor: pointer;;
-           
-
            &__file{
               display: none;
              }
             }
         }
-
         &__btn{
           width: 100px;
           height: 50px;
@@ -186,13 +162,7 @@
           background-color: #38aef0;
           color: white;
           cursor: pointer;
-         }
-
-
-
-        
-
-        
+         }  
       }
      }
  }
