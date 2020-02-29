@@ -107,18 +107,22 @@
       padding: 46px 40px;
       background-color: #fafafa;
       overflow: scroll;
+      
       &__box{
-        display: flex;
-        margin-bottom: 10px;
-        &__name{
-          color: #434a54;
-          font-size: 16px;
-          font-weight: bold;
-        }
-        &__daily{
-          color: #999999;
-          font-size: 12px;
-          margin-left: 10px;
+        padding-bottom: 40px;
+        &__upper{
+                display: flex;
+          margin-bottom: 10px;
+          &__name{
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__daily{
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
         }
       }
       &__text{
@@ -127,43 +131,43 @@
         margin-bottom: 10px;
       }
     }
-    &__form{
-      height: 90px;
-       padding: 20px 40px;
-       background-color: #ddd;
-      &__new-message{
-        display: flex;
-        &__input-box{
+ 
+  
+  &__from {
+    height: 90px;
+    background-color: #D2D2D2;
+    padding: 20px 40px;
+    &__box {
+      display: flex;
+      &__new {
+        width: 100%;
         position: relative;
-       width: 100%;
-          &__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
-            color: #434a54;
-            border-style: none;
-          }
-          &__image{
-            font-size: 1.3rem;
-            position: absolute;
-          top: 10px;
-        right: 10px;
-       cursor: pointer;;
-           &__file{
-              display: none;
-             }
-            }
+        &__text {
+         height: 50px;
+         width: 100%;
+         padding: 0 40px 0 10px;
+        color: #434A54;
         }
-        &__btn{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
-          cursor: pointer;
-         }  
+        &__image {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right:10px;
+          &__file {
+            display: none;
+          }
+        }
       }
-     }
+      &__btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        background-color: blue;
+        margin-left: 15px;
+        color: $white;
+      }
+    }
+  }
  }
 }
+

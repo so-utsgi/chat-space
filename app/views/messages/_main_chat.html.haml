@@ -2,34 +2,40 @@
   .contents__header
     .contents__header__group
       .contents__header__group__name
-        %p test 
+        = @group.name 
       .contents__header__group__text
-        %p Member: masa
+        - @group.users.each do |user|
+          = user.name
     .contents__header__edit
-      Edit 
+      = link_to edit_group_path(@group), class:"name" do
+        Edit
   .contents__message
-    .contents__message__box
-      .contents__message__box__name
-        masa
-      .contents__message__box__daily
-        2019/1120(wed)17:43:01
-    .contents__message__text
-      おはよう
+    = render @messages
+    
+    -# .contents__message__box
+    -#   .contents__message__box__name
+    -#     masa
+    -#   -# .contents__message__box__daily
+    -#     2019/1120(wed)17:43:01
+    -# .contents__message__text
+      
 
-    .contents__message__box
-      .contents__message__box__name
-        masa
-      .contents__message__box__daily
-        2019/1120(wed)17:43:01
-    .contents__message__text
-      おはよう
-  
+    -# .contents__message__box
+    -#   .contents__message__box__name
+    -#     masa
+    -#   .contents__message__box__daily
+    -#     2019/1120(wed)17:43:01
+    -# .contents__message__text
+    -#   おはよう
 
-  .contents__form
-    %form.contents__form__new-message
-      .contents__form__new-message__input-box
-        %input{type: "text", class: "contents__form__new-message__input-box__text", placeholder: "type a message"}
-        %label{class: "contents__form__new-message__input-box__image"}
+  .contents__from
+    = form_for [@group, @message], html: {class: 'contents__from__box'} do |f|
+      .contents__from__box__new
+        = f.text_field :content, class: 'contents__from__box__new__text', placeholder: 'type a message'
+        = f.label :image, class: 'contents__from__box__new__image' do
           = icon('fas', 'image')
-          %input{type: "file", class: 'contents__form__new-message__input-box__image__file'}
-      %input{type: "submit", class: "contents__form__new-message__btn"}
+          = f.file_field :image, class: 'contents__from__box__new__image__file'
+      = f.submit 'Send', class: 'contents__from__box__btn'
+
+
+  

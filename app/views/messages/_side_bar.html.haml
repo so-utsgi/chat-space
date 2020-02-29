@@ -12,8 +12,8 @@
             = icon('fas', 'cog', class: 'icon')    
   .groups
     - current_user.groups.each do |group|  
-      = link_to '#' do
+      = link_to group_messages_path(group) do
         .groups__group__group_name            
           = group.name
         .groups__group__group_message 
-          メッセージはまだありません。
+          = group.show_last_message
