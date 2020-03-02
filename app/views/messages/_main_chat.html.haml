@@ -12,22 +12,7 @@
   .contents__message
     = render @messages
     
-    -# .contents__message__box
-    -#   .contents__message__box__name
-    -#     masa
-    -#   -# .contents__message__box__daily
-    -#     2019/1120(wed)17:43:01
-    -# .contents__message__text
-      
-
-    -# .contents__message__box
-    -#   .contents__message__box__name
-    -#     masa
-    -#   .contents__message__box__daily
-    -#     2019/1120(wed)17:43:01
-    -# .contents__message__text
-    -#   おはよう
-
+     
   .contents__from
     = form_for [@group, @message], html: {class: 'contents__from__box'} do |f|
       .contents__from__box__new
