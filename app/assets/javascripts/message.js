@@ -57,13 +57,13 @@ $('#new_message').on('submit', function(e){
        $('.contents__message').animate({scrollTop: $('.contents__message')[0].scrollHeight});      
        $('form')[0].reset();
        $('.contents__from__box__btn').prop('disabled', false);
-     })
+      })
      .fail(function() {
       alert("メッセージ送信に失敗しました");
-     })
+      })
      .always(function(){
       $('.contents__from__box__btn').prop('disabled', false);
-     });
+      });
  
 })
 });
