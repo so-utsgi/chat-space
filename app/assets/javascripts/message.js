@@ -2,7 +2,7 @@ $(function(){
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="contents__message__box" data-message-id=message.id>
+      var html = `<div class="contents__message__box" data-message-id=${message.id}>
         <div class="contents__message__box__upper">
           <div class="contents__message__box__upper__name">
             ${message.user_name} 
@@ -20,7 +20,7 @@ $(function(){
       </div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="contents__message__box" data-message-id= message.id >
+      var html = `<div class="contents__message__box" data-message-id= ${message.id} >
         <div class="contents__message__box__upper">
           <div class="contents__message__box__upper__name">
             ${message.user_name}
@@ -37,7 +37,7 @@ $(function(){
       </div>`
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="contents__message__box" data-message-id= message.id>
+      var html = `<div class="contents__message__box" data-message-id= ${message.id}>
         <div class="contents__message__box__upper">
           <div class="contents__message__box__upper__name">
             ${message.user_name}
