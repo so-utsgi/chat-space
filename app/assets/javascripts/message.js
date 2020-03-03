@@ -2,54 +2,54 @@ $(function(){
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="contents__message__box" data-message-id=` + message.id + `>` +
-        `<div class="contents__message__box__upper">` +
-          `<div class="contents__message__box__upper__name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="contents__message__box__upper__daily">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="contents__message__text">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="contents__message__box" data-message-id=message.id>
+        <div class="contents__message__box__upper">
+          <div class="contents__message__box__upper__name">
+            ${message.user_name} 
+          </div>
+          <div class="contents__message__box__upper__daily">
+            ${message.created_at} 
+          </div>
+        </div>
+        <div class="contents__message__text">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+        </div>
+          <img src=${message.image} class="lower-message__image" >
+      </div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="contents__message__box" data-message-id=` + message.id + `>` +
-        `<div class="contents__message__box__upper">` +
-          `<div class="contents__message__box__upper__name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="contents__message__box__upper__daily">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="contents__message__text">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="contents__message__box" data-message-id= message.id >
+        <div class="contents__message__box__upper">
+          <div class="contents__message__box__upper__name">
+            ${message.user_name}
+          </div>
+          <div class="contents__message__box__upper__daily">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="contents__message__text">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+        </div>
+      </div>`
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="contents__message__box" data-message-id=` + message.id + `>` +
-        `<div class="contents__message__box__upper">` +
-          `<div class="contents__message__box__upper__name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="contents__message__box__upper__daily">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message">` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="contents__message__box" data-message-id= message.id>
+        <div class="contents__message__box__upper">
+          <div class="contents__message__box__upper__name">
+            ${message.user_name}
+          </div>
+          <div class="contents__message__box__upper__daily">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          <img src=${message.image} "class="lower-message__image" >
+        </div>
+      </div>`
     };
     return html;
   };
@@ -89,7 +89,6 @@ $('#new_message').on('submit', function(e){
 var reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
   var last_message_id = $('.contents__message__box:last').data("message-id");
-  console.log(last_message_id)
   $.ajax({
     //ルーティングで設定した通りのURLを指定
     url: "api/messages",
