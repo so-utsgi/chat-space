@@ -52,15 +52,22 @@
     color: #ffffff;
     &__group{
       
+      text-align: none;
       text-decoration: none;
       margin-bottom: 40px;
       &__group_name{
         font-size: 15px;
-    margin-bottom: 5px;  
+    margin-bottom: 5px;
+    color: white; 
+     
      }
       &__group_message{
       font-size: 11px;
+      color: white;
       }
+     }
+     a{
+       text-decoration: none;
      }
     }
      
@@ -100,6 +107,9 @@
        position: absolute;
        right: 40px;
        color: #38aef0;;
+      }
+      a{
+        text-decoration: none;
       }
     }
     &__message{
