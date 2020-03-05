@@ -106,10 +106,14 @@
         border: solid 1px #38aef0;
        position: absolute;
        right: 40px;
-       color: #38aef0;;
-      }
+       
+
+      
+      
       a{
         text-decoration: none;
+        color: #38aef0;
+      }
       }
     }
     &__message{
@@ -172,7 +176,7 @@
         width: 100px;
         height: 50px;
         padding: 0 30px;
-        background-color: blue;
+        background-color: #38aef0;
         margin-left: 15px;
         color: $white;
       }
